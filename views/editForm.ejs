@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Items</title>
+</head>
+<body>
+  <h1>
+  Edit Tenty
+  </h1>
+      <form action="/tentifies/<%= tenty._id %>/edit?_method=PUT" method="POST">
+   <div>
+     <label for="title">Enter Title</label>
+     <input type="text" name="title" id="title" value="<%= tenty.title %>" >
+   </div>
+   <div>
+     <label for="location">Location</label>
+    <input type="text" name="location" id="location" value = "<%= tenty.location %>">
+   </div>
+
+
+    <div>
+    <input type="submit" value="Update now">
+   </div>
+        <a href="/tentifies/">Back</a>
+    </form>   
+</body>
+</html>

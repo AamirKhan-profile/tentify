@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li 
+        {
+            width: 20%;
+            background-color: rgba(255, 183, 0, 1);
+            color: deeppink;
+            margin-top: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color:rgb(27, 65, 251); width:30%;background-color:darkorange">All Tentifies</h1>
+      <a href="/tentifies/new/"><h2>Add New</h2></a>
+  <ul>
+    <% tenties.forEach(function(tent) { %>
+      <li><a href="/tentifies/<%= tent._id %>"><%= tent.title %></a></li>
+    <% }); %>
+  </ul>
+</body>
+</html>
